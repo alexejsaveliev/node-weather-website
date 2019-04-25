@@ -1,5 +1,3 @@
-console.log('JS public file loaded');
-
 
 const weatherForm = document.querySelector('form')
 const searchEl = document.querySelector('input')
