@@ -2,7 +2,7 @@ const request = require('request');
 const cyrilicToTransl = require('cyrillic-to-translit-js')
 
 const geocode = (address, callback) => {
-    console.log(cyrilicToTransl().transform(address));
+    
     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(cyrilicToTransl().transform(address)) + '.json?access_token=pk.eyJ1IjoibWF0dGZpY2tlIiwiYSI6ImNqNnM2YmFoNzAwcTMzM214NTB1NHdwbnoifQ.Or19S7KmYPHW8YjRz82v6g&cachebuster=1555155374130&autocomplete=true&limit=1'
 
     request({url, json: true}, (error, {body} = {}) => {
